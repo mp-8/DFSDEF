@@ -1,0 +1,20 @@
+Script: local function callback(Text)
+ if Text == "LOL text" then
+  print ("OLOLO")
+elseif Text == ("Button2 text") then
+ print ("OLLL")
+ end
+end
+
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+--
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "LOL";
+ Text = "LOL";
+ Icon = "";
+ Duration = 5;
+ Button1 = "OLO text";
+ Button2 = "LOL text";
+ Callback = NotificationBindable;
+})
